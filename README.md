@@ -1,4 +1,4 @@
 ocw-bot
 =======
 
-IRC bot for lulz in the cow channel.
+IRC bot for lulz in the ocw channel.
