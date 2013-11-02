@@ -1,0 +1,19 @@
+{
+  "name": "ocw-bot",
+  "mod-project-name": "ocw-bot",
+  "version": "0.0.0",
+  "description": "IRC bot for #outofcontrolware",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "Matt Hernandez <matt@modulus.io>",
+  "license": "MIT",
+  "dependencies": {
+    "irc": "~0.3.6",
+    "request": "~2.27.0"
+  },
+  "devDependencies": {
+    "jshint": "~2.3.0"
+  }
+}
