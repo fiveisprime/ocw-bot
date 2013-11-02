@@ -49,9 +49,12 @@ bot.on('message', function(from, to, text) {
 
   if (/emacs/gi.test(text)) bot.say(to, 'lol code formatting...');
 
+  if (/peter/gi.test(text)) bot.say(to, 'he\'s the coolest');
+
   if (/node/gi.test(text)) bot.say(to, 'node.js is fucking bad ass rock star tech');
 
   if (/meerkat|meekrat/gi.test(text)) bot.say(to, 'JamieScript! ' + lols[~~(Math.random() * lols.length)]);
 
   if (/lolbot/gi.test(text)) getRandomLol(function(err, out) { bot.say(to, err || out); });
+
 });
