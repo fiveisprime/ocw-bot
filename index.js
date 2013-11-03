@@ -37,23 +37,21 @@ bot.on('message', function(from, to, text) {
 
   if (/test/gi.test(text)) bot.say(to, 'testing is for noobs lol');
 
-  if (/jamie/gi.test(text)) bot.say(to, 'your opinion has been noted lol');
+  if (/jamie/gi.test(text)) bot.say(to, 'your opinion has been noted ' + lols[~~(Math.random() * lols.length)]);
 
   if (/merge|merging/gi.test(text)) bot.say(to, 'wasting all day in SVN, huh? lol');
 
   if (/ken/gi.test(text)) bot.say(to, 'he\'s got those moves like ken mcjagger.. lol');
 
-  if (/scott/gi.test(text)) bot.say(to, 'do it in powerpoint ' + lols[~~(Math.random() * lols.length)]);
+  if (/scott|ux/gi.test(text)) bot.say(to, 'just do it in powerpoint ' + lols[~~(Math.random() * lols.length)]);
 
   if (/beer/gi.test(text)) bot.say(to, 'I\'ll take one too');
 
-  if (/emacs/gi.test(text)) bot.say(to, 'lol code formatting...');
+  if (/emacs/gi.test(text)) bot.say(to, 'lol code         formatting. ..');
 
   if (/peter/gi.test(text)) bot.say(to, 'he\'s the coolest');
 
-  if (/node/gi.test(text)) bot.say(to, 'node.js is fucking bad ass rock star tech');
-
-  if (/meerkat|meekrat/gi.test(text)) bot.say(to, 'JamieScript! ' + lols[~~(Math.random() * lols.length)]);
+  if (/meerkat|meekrat/gi.test(text)) bot.say(to, 'JamieScript ' + lols[~~(Math.random() * lols.length)]);
 
   if (/lolbot/gi.test(text)) getRandomLol(function(err, out) { bot.say(to, err || out); });
 });
