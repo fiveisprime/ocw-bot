@@ -56,5 +56,4 @@ bot.on('message', function(from, to, text) {
   if (/meerkat|meekrat/gi.test(text)) bot.say(to, 'JamieScript! ' + lols[~~(Math.random() * lols.length)]);
 
   if (/lolbot/gi.test(text)) getRandomLol(function(err, out) { bot.say(to, err || out); });
-
 });
