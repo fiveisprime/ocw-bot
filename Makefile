@@ -1,4 +1,4 @@
-SRC = index.js
+SRC = index.js lib/bot.js spec/ocw-bot-spec.js
 
 test: $(SRC)
 	@node node_modules/.bin/jshint $^ \

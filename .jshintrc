@@ -47,5 +47,16 @@
   "supernew"      : false,
   "validthis"     : false,
 
-  "node"          : true
+  "node"          : true,
+
+  "globals"       : {
+    "afterEach"   : false,
+    "beforeEach"  : false,
+    "describe"    : false,
+    "expect"      : false,
+    "it"          : false,
+    "spyOn"       : false,
+    "xit"         : false,
+    "xdescribe"   : false
+  }
 }
