@@ -1,10 +1,14 @@
 var events = new require('events')
-  , tee = new events.EventEmitter()
-  , bot = require('../lib/bot')(tee);
+  , tee    = new events.EventEmitter()
+  , bot    = require('../lib/bot')(tee);
 
 describe('ocw bot', function() {
 
   beforeEach(function() {
+    //
+    // Spy on the bot's say function and the random lol function. Spying on the
+    //    random lol function will prevent outgoing requests.
+    //
     spyOn(bot, 'say');
     spyOn(bot, 'getRandomLol').andCallFake(function() {
       return arguments[0]('test lol');
