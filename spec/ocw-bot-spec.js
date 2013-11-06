@@ -10,15 +10,6 @@ describe('ocw bot', function() {
     //    random lol function will prevent outgoing requests.
     //
     spyOn(bot, 'say');
-    spyOn(bot, 'getRandomLol').andCallFake(function() {
-      return arguments[0]('test lol');
-    });
-  });
-
-  it('should send a message on join', function() {
-    bot.client.emit('join', '#channel', 'test');
-
-    expect(bot.say).wasCalled();
   });
 
   it('should send a lol for intelligrated specific words', function() {
