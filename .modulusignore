@@ -1,0 +1,7 @@
+migrators
+spec
+TextsFromLastNight
+
+.jshintrc
+README.md
+Makefile
