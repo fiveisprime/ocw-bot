@@ -1,6 +1,7 @@
 var events = new require('events')
   , tee    = new events.EventEmitter()
-  , bot    = require('../lib/bot')(tee);
+  , db     = require('level')('../loltext.db')
+  , bot    = require('../lib/bot')(tee, db);
 
 describe('ocw bot', function() {
 
