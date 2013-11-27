@@ -5,22 +5,19 @@ ocw-bot
 
 IRC bot for lulz in the ocw channel.
 
-# Text data and LevelDB
+# Text to JSON
 
-There is a plain text to level migrator that will take data from a text file,
-split it on newline characters, then dump that data to the database with the
-key as the index of that data in the array. This is used to add additional
-lols to the randomness.
+There is a plain text to JSON migrator that will take data from a text file,
+split it on newline characters, then dump that data to a JSON file.
 
 The migration command from the root directory is
 
-    $ node ./migrators/text-t-level.js <path/to/text/file.txt>
+    $ node migrators/text-to-json.js <path/to/input-file.txt> <path/to/output-file.json>
 
-If a file specifier is passed to the script, the data in the file will be added
-to the database; otherwise, the script will calculate the total number of lols
-in the level database and update its lolcount key which is used to grab data
-randomly.
+To use this JSON file in the bot, just require it and use it as an array of
+data.
 
-# Contributions
+# Continuous Integration
 
-Be sure that `make test` exits with 0 before pushing your changes. :)
+All changes that are pushed will trigger a Codeship build and deploy the changes
+if the `npm test` passes.

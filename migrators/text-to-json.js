@@ -1,5 +1,4 @@
-var level = require('level')
-  , fs    = require('fs');
+var fs = require('fs');
 
 if (process.argv.length < 4) process.exit(1);
 
