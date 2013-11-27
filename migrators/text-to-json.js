@@ -1,6 +1,7 @@
 var fs = require('fs');
 
 if (process.argv.length < 4) process.exit(1);
+if (!fs.existsSync(process.argv[2])) process.exit(1);
 
 fs.readFile(process.argv[2], { encoding: 'utf8' }, function(err, data) {
   if (err) throw err;
