@@ -12,8 +12,8 @@ describe('ocw bot', function() {
     spyOn(bot, 'say');
   });
 
-  it('should send a lol for intelligrated specific words', function() {
-    bot.client.emit('message', 'test', 'test', 'intelligrated');
+  it('should send a lol for icw specific words', function() {
+    bot.client.emit('message', 'test', 'test', 'icw');
 
     expect(bot.say).wasCalled();
   });
