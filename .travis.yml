@@ -1,9 +1,9 @@
 language: node_js
 node_js:
-  - 0.8
-  - 0.10
+  - 0.8.x
+  - 0.10.x
 env:
   global:
-    "QFn93WshQyYu0wAYvlinEyAeDc2E/4wnIVQvADkKSw00wlV88NARBKj7a90tbrrvjqwXym3RnEIRHXmXJVtMFvHg5hEUP+mnL38MZhJYEZ6rz6GUF6NeMlRGCPcb0RLEw68HbMszlo8sGELK7I5oYoIo2NC3ZHNGjmUbeGSQpKw="
+    - "QFn93WshQyYu0wAYvlinEyAeDc2E/4wnIVQvADkKSw00wlV88NARBKj7a90tbrrvjqwXym3RnEIRHXmXJVtMFvHg5hEUP+mnL38MZhJYEZ6rz6GUF6NeMlRGCPcb0RLEw68HbMszlo8sGELK7I5oYoIo2NC3ZHNGjmUbeGSQpKw="
 after_success:
   - node_modules/.bin/modulus deploy -p "ocw-bot"
