@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "jshint": "~2.3.0",
-    "jasmine-node": "~1.11.0"
+    "jasmine-node": "~1.11.0",
+    "modulus": "~0.2.3"
   }
 }
