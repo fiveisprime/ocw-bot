@@ -6,4 +6,4 @@ env:
   global:
     - "QFn93WshQyYu0wAYvlinEyAeDc2E/4wnIVQvADkKSw00wlV88NARBKj7a90tbrrvjqwXym3RnEIRHXmXJVtMFvHg5hEUP+mnL38MZhJYEZ6rz6GUF6NeMlRGCPcb0RLEw68HbMszlo8sGELK7I5oYoIo2NC3ZHNGjmUbeGSQpKw="
 after_success:
-  - node_modules/.bin/modulus deploy -p "ocw-bot"
+  "MODULUS_TOKEN=$MODULUS_TOKEN node_modules/.bin/modulus deploy -p \"ocw-bot\""
