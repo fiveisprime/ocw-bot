@@ -1,4 +1,4 @@
-ocw-bot
+ocw-bot [![Build Status](https://travis-ci.org/fiveisprime/ocw-bot.png?branch=master)](https://travis-ci.org/fiveisprime/ocw-bot)
 =======
 
 IRC bot for lulz in the ocw channel.
