@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "description": "IRC bot for #outofcontrolware",
   "main": "index.js",
+  "engines": {
+    "node": "0.10.x"
+  },
   "scripts": {
     "test": "make test"
   },
