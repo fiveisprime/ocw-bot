@@ -1,10 +1,8 @@
 language: node_js
 node_js:
-  - 0.8.x
-  - 0.10.x
-env:
-  global:
-    - secure: "QFn93WshQyYu0wAYvlinEyAeDc2E/4wnIVQvADkKSw00wlV88NARBKj7a90tbrrvjqwXym3RnEIRHXmXJVtMFvHg5hEUP+mnL38MZhJYEZ6rz6GUF6NeMlRGCPcb0RLEw68HbMszlo8sGELK7I5oYoIo2NC3ZHNGjmUbeGSQpKw="
-after_success:
-  - npm install -g modulus
-  - modulus deploy -p "ocw-bot"
+- 0.10.x
+deploy:
+  provider: modulus
+  project_name: ocw-bot
+  api_key:
+    secure: KNfMw65FI+lRXNWXIc/m30wCShbkhFPqxy1owH7tgN9lNT2Am0hjVDOiMVcpHbP2jH772W7IpX1+t+NDSfvM+T/b5C/wc7DENUYqzv5287nT0WUeZMAbj8+8zhdEeLy6WBhb9uSUZwKLb8tUImfxh96voV05kEYjVdFB76db/v8=
