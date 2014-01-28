@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-- 0.8.x
-- 0.10.x
+  - '0.8'
+  - '0.10'
 deploy:
   provider: modulus
   edge: true
@@ -10,4 +10,4 @@ deploy:
     secure: KNfMw65FI+lRXNWXIc/m30wCShbkhFPqxy1owH7tgN9lNT2Am0hjVDOiMVcpHbP2jH772W7IpX1+t+NDSfvM+T/b5C/wc7DENUYqzv5287nT0WUeZMAbj8+8zhdEeLy6WBhb9uSUZwKLb8tUImfxh96voV05kEYjVdFB76db/v8=
   on:
     branch: master
-    node: 0.10.x
+    node: '0.10'
