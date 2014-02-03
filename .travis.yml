@@ -1,13 +1,13 @@
 language: node_js
 node_js:
-  - '0.8'
-  - '0.10'
+- '0.8'
+- '0.10'
 deploy:
   provider: modulus
   edge: true
-  project_name: "ocw-bot"
+  project_name: ocw-bot
   api_key:
-    secure: KNfMw65FI+lRXNWXIc/m30wCShbkhFPqxy1owH7tgN9lNT2Am0hjVDOiMVcpHbP2jH772W7IpX1+t+NDSfvM+T/b5C/wc7DENUYqzv5287nT0WUeZMAbj8+8zhdEeLy6WBhb9uSUZwKLb8tUImfxh96voV05kEYjVdFB76db/v8=
+    secure: J+rtR1AMSyDT8gqWOdzaJxhzM24w9xYc0CwFVjVkpe55xeyk5y9B6i0bSNvrhb3oSsQQyNY9+yijpqjSJylihUIJW/JN3k3pCJq2u9Gcu7rdoUu1YsK2XXfd1J5jDJUl+3DEarjryhGPbH1ZIxtjeP8VnkxxwhLY2Et8UMCgRNQ=
   on:
     branch: master
     node: '0.10'
