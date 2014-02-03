@@ -4,6 +4,7 @@ node_js:
 - '0.10'
 deploy:
   provider: modulus
+  edge: true
   project_name: ocw-bot
   api_key:
     secure: J+rtR1AMSyDT8gqWOdzaJxhzM24w9xYc0CwFVjVkpe55xeyk5y9B6i0bSNvrhb3oSsQQyNY9+yijpqjSJylihUIJW/JN3k3pCJq2u9Gcu7rdoUu1YsK2XXfd1J5jDJUl+3DEarjryhGPbH1ZIxtjeP8VnkxxwhLY2Et8UMCgRNQ=
