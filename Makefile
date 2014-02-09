@@ -1,9 +1,8 @@
 SRC = index.js lib/bot.js spec/ocw-bot-spec.js
 
 test: $(SRC)
-	@node node_modules/.bin/jshint $^ \
-	--verbose
-	@NODE_ENV=test node node_modules/.bin/jasmine-node \
-	--verbose \
-	--captureExceptions \
-	spec
+	@node_modules/.bin/jshint $^
+	@node_modules/.bin/istanbul test node_modules/.bin/_mocha \
+	-R spec -- \
+	--require should \
+	--reporter spec
