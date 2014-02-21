@@ -3,6 +3,7 @@ node_js:
 - '0.8'
 - '0.10'
 deploy:
+  edge: true
   provider: modulus
   project_name: ocw-bot
   api_key:
