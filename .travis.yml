@@ -2,12 +2,18 @@ language: node_js
 node_js:
 - '0.8'
 - '0.10'
-deploy:
-  edge: true
-  provider: modulus
-  project_name: ocw-bot
-  api_key:
-    secure: J+rtR1AMSyDT8gqWOdzaJxhzM24w9xYc0CwFVjVkpe55xeyk5y9B6i0bSNvrhb3oSsQQyNY9+yijpqjSJylihUIJW/JN3k3pCJq2u9Gcu7rdoUu1YsK2XXfd1J5jDJUl+3DEarjryhGPbH1ZIxtjeP8VnkxxwhLY2Et8UMCgRNQ=
-  on:
-    branch: master
-    node: '0.10'
+env:
+  global:
+    secure: PM/4lVRc3sJ/C8pV/ZIozfjx5DbJhS//+KY93TAj9X0xTEamYfyJNxgeeqUHuYG+CMR+V58R04nfazhJPCSUBiy2YX9P1/ocs78gvkZ8OPwF4fzN+99Ib+G79eV9wFQeAALfvymS8dybSpw/MYiRSwIhbyDR3rr6/TWaUf2cZRA=
+after_success:
+  - npm install -g modulus
+  - modulus deploy -p "ocw-bot"
+# deploy:
+#   edge: true
+#   provider: modulus
+#   project_name: ocw-bot
+#   api_key:
+#     secure: J+rtR1AMSyDT8gqWOdzaJxhzM24w9xYc0CwFVjVkpe55xeyk5y9B6i0bSNvrhb3oSsQQyNY9+yijpqjSJylihUIJW/JN3k3pCJq2u9Gcu7rdoUu1YsK2XXfd1J5jDJUl+3DEarjryhGPbH1ZIxtjeP8VnkxxwhLY2Et8UMCgRNQ=
+#   on:
+#     branch: master
+#     node: '0.10'
