@@ -17,5 +17,5 @@ data.
 
 # Continuous Integration
 
-All changes that are pushed will trigger a Codeship build and deploy the changes
-if the `npm test` passes.
+All changes that are pushed will trigger build and deploy the changes if the
+`npm test` passes.
