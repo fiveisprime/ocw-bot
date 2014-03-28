@@ -1,7 +1,5 @@
 ocw-bot [![Build Status](https://travis-ci.org/fiveisprime/ocw-bot.svg?branch=master)](https://travis-ci.org/fiveisprime/ocw-bot)
 
-[ ![Codeship Status for fiveisprime/ocw-bot](https://www.codeship.io/projects/d257dcd0-9405-0131-e799-26997d75bf5c/status?branch=master)](https://www.codeship.io/projects/16685)
-
 =======
 
 IRC bot for lulz in the ocw channel.
