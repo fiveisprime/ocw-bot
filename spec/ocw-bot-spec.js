@@ -33,10 +33,11 @@ describe('ocw bot', function() {
     bot.client.emit('message', 'test', 'test', 'webbuilder');
     bot.client.emit('message', 'test', 'test', 'doug');
     bot.client.emit('message', 'test', 'test', '!text');
+    bot.client.emit('message', 'test', 'test', '!text the');
     bot.client.emit('message', 'test', 'test', 'wat');
 
     bot.say.called.should.equal(true);
-    bot.say.callCount.should.equal(14);
+    bot.say.callCount.should.equal(15);
   });
 
   it('should handle private messages', function() {
