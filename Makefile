@@ -5,5 +5,4 @@ test: $(SRC)
 	@node_modules/.bin/istanbul test node_modules/.bin/_mocha \
 	-R spec -- \
 	--require should \
-	--no-colors \
 	--reporter spec
