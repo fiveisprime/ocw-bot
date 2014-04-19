@@ -8,7 +8,8 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
