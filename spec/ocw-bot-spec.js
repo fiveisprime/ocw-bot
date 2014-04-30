@@ -1,7 +1,7 @@
-var events = new require('events')
-  , sinon  = require('sinon')
-  , tee    = new events.EventEmitter()
-  , bot    = null;
+var events = new require('events');
+var sinon  = require('sinon');
+var tee    = new events.EventEmitter();
+var bot    = null;
 
 describe('ocw bot', function() {
 
