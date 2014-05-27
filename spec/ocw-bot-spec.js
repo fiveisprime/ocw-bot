@@ -15,7 +15,7 @@ describe('ocw bot', function() {
     bot.say = sinon.spy();
     bot.client.emit('message', 'test', 'test', 'icw');
 
-    bot.say.calledOnce.should.equal(true);
+    bot.say.calledOnce.should.be.true;
   });
 
   it('should send a lol for certain names', function() {
@@ -36,7 +36,7 @@ describe('ocw bot', function() {
     bot.client.emit('message', 'test', 'test', '!text the');
     bot.client.emit('message', 'test', 'test', 'wat');
 
-    bot.say.called.should.equal(true);
+    bot.say.called.should.be.true;
     bot.say.callCount.should.equal(15);
   });
 
@@ -44,6 +44,14 @@ describe('ocw bot', function() {
     bot.client.say = sinon.spy();
     bot.handlePm('test');
 
-    bot.client.say.called.should.equal(true);
+    bot.client.say.called.should.be.true;
+  });
+
+  it('should output urban dictionary definitions', function () {
+    bot.sayUrbanDictionaryDefinition = sinon.spy();
+    bot.client.emit('message', 'test', 'test', '!ud test message');
+
+    bot.sayUrbanDictionaryDefinition.called.should.be.true;
+    bot.sayUrbanDictionaryDefinition.calledWith(['test', 'message']);
   });
 });
