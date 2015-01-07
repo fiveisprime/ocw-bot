@@ -13,7 +13,10 @@ var it       = lab.test;
 describe('ocw bot', function() {
 
   it('should initialize with no errors', function (done) {
-    bot = require('../lib/bot')(tee);
+    assert.doesNotThrow(function () {
+      bot = require('../lib/bot')(tee);
+    });
+
     assert(typeof bot, 'object');
 
     done();
