@@ -1,24 +1,33 @@
 var events = new require('events');
+var assert = require('assert');
 var sinon  = require('sinon');
+var Lab    = require('lab');
+
+var lab    = exports.lab = Lab.script();
 var tee    = new events.EventEmitter();
 var bot    = null;
 
+var describe = lab.experiment;
+var it       = lab.test;
+
 describe('ocw bot', function() {
 
-  it('should initialize with no errors', function() {
-    (function() {
-      bot = require('../lib/bot')(tee);
-    }).should.not.throw();
+  it('should initialize with no errors', function (done) {
+    bot = require('../lib/bot')(tee);
+    assert(typeof bot, 'object');
+
+    done();
   });
 
-  it('should send a lol for icw specific words', function() {
+  it('should send a lol for icw specific words', function (done) {
     bot.say = sinon.spy();
     bot.client.emit('message', 'test', 'test', 'icw');
 
-    bot.say.calledOnce.should.be.true;
+    assert(bot.say.calledOnce, true);
+    done();
   });
 
-  it('should send a lol for certain names', function() {
+  it('should send a lol for certain names', function (done) {
     bot.say = sinon.spy();
     bot.client.emit('message', 'test', 'test', 'scott');
     bot.client.emit('message', 'test', 'test', 'jamie');
@@ -36,22 +45,28 @@ describe('ocw bot', function() {
     bot.client.emit('message', 'test', 'test', '!text the');
     bot.client.emit('message', 'test', 'test', 'wat');
 
-    bot.say.called.should.be.true;
-    bot.say.callCount.should.equal(15);
+    assert(bot.say.called, true);
+    assert(bot.say.callCount, 15);
+
+    done();
   });
 
-  it('should handle private messages', function() {
+  it('should handle private messages', function (done) {
     bot.client.say = sinon.spy();
     bot.handlePm('test');
 
-    bot.client.say.called.should.be.true;
+    assert(bot.client.say.called, true);
+
+    done();
   });
 
-  it('should output urban dictionary definitions', function () {
+  it('should output urban dictionary definitions', function (done) {
     bot.sayUrbanDictionaryDefinition = sinon.spy();
     bot.client.emit('message', 'test', 'test', '!ud test message');
 
-    bot.sayUrbanDictionaryDefinition.called.should.be.true;
+    assert(bot.sayUrbanDictionaryDefinition.called, true);
     bot.sayUrbanDictionaryDefinition.calledWith(['test', 'message']);
+
+    done();
   });
 });

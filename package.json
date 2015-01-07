@@ -8,7 +8,10 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "test": "make test",
+    "pretest": "npm run jshint",
+    "jshint": "jshint --exclude-path .gitignore ./",
+    "test": "lab",
+    "test:coverage": "lab -r html -o coverage.html -a code",
     "start": "node ."
   },
   "repository": {
@@ -23,10 +26,9 @@
     "request": "~2.36.0"
   },
   "devDependencies": {
-    "jshint": "~2.3.0",
-    "should": "~3.1.2",
-    "sinon": "~1.8.1",
-    "mocha": "~1.17.1",
-    "istanbul": "~0.2.4"
+    "code": "~1.2.1",
+    "jshint": "~2.5.11",
+    "lab": "~5.1.1",
+    "sinon": "~1.8.1"
   }
 }

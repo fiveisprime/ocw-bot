@@ -3,7 +3,7 @@
 
   "bitwise"       : false,
   "camelcase"     : false,
-  "curly"         : true,
+  "curly"         : false,
   "eqeqeq"        : true,
   "forin"         : true,
   "immed"         : false,
@@ -36,7 +36,7 @@
   "iterator"      : false,
   "lastsemic"     : false,
   "laxbreak"      : false,
-  "laxcomma"      : false,
+  "laxcomma"      : true,
   "loopfunc"      : false,
   "multistr"      : false,
   "proto"         : false,
@@ -47,16 +47,5 @@
   "supernew"      : false,
   "validthis"     : false,
 
-  "node"          : true,
-
-  "globals"       : {
-    "afterEach"   : false,
-    "beforeEach"  : false,
-    "describe"    : false,
-    "expect"      : false,
-    "it"          : false,
-    "spyOn"       : false,
-    "xit"         : false,
-    "xdescribe"   : false
-  }
+  "node"          : true
 }
